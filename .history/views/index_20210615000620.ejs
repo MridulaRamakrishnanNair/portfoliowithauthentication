@@ -1,0 +1,23 @@
+
+<%- include('./components/header.ejs'); %>
+  <!--Navigation Section-->
+  <header>
+    <%- include('./components/navigation.ejs'); %>
+  </header>
+
+
+  <!-- Main Content-->
+  <main>
+    <%- include('./content/' + page + '.ejs' ); %>
+  </main>
+
+
+  <!--Bottom Navigation-->
+  <footer>
+    <%- include('./components/footer.ejs'); %>
+  </footer>
+
+  
+    
+  <!-- Javascript Section-->
+  <%- include('./components/bottom.ejs'); %>

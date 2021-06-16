@@ -1,0 +1,37 @@
+
+<%- include('./components/header.ejs'); %>
+
+  <!--Navigation Section-->
+
+  <header>
+    <%- include('./components/nav.ejs'); %>
+  </header>
+
+
+  <!-- Main Content-->
+  <main>
+    <%- include('./content/' + page + '.ejs' ); %>
+  </main>
+
+
+  <!--Bottom Nav-->
+  <footer>
+    <%- include('./components/footer.ejs'); %>
+  </footer>
+
+  <!--Footer Section-->
+
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid">
+      <h4>&copy; Copyright 2021. All rights reserved</h4>
+    </div>
+  </nav>
+    
+  <!--Javascripts Bottom Section-->
+  <script src ="/jquery/dist/jquery.min.js"></script>
+  <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/Scripts/app.js"></script>
+
+
+</body>
+</html>

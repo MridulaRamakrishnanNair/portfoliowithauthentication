@@ -1,0 +1,30 @@
+
+<%- include('./components/header.ejs'); %>
+  <!--Navigation Section-->
+
+  <header>
+    <%- include('./components/navigation.ejs'); %>
+  </header>
+
+
+  <!-- Main Content-->
+  <main>
+    <%- include('./content/' + page + '.ejs' ); %>
+  </main>
+
+
+  <!--Bottom Navigation-->
+  <footer>
+    <%- include('./components/footer.ejs'); %>
+  </footer>
+
+  <!--Footer Section-->
+
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <div class="container-fluid">
+      <h4>&copy; Copyright 2021. All rights reserved</h4>
+    </div>
+  </nav>
+    
+  <!-- Javascript Section-->
+  <%- include('./components/bottom.ejs'); %>
