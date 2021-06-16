@@ -6,7 +6,7 @@
 import createError from 'http-errors';
 import app from './Server/Config/app';
 import debug from 'debug';
-debug('mridularamakrishnan301145813-portfoliowithauthentication:server');
+debug('mridularamakrishnan301145813-portfolio:server');
 import http  from 'http';
 
 /**
