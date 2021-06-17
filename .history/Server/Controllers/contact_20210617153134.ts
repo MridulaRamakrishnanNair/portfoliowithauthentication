@@ -20,16 +20,5 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
 
     //db.contact.find({"_id": id})
 
-    Contact.findById(id, {}, {}, (err, contactItemToEdit) =>
-    
-    {
-        if (err)
-        {
-            console.error(err);
-            res.end(err);
-        }
-        
-        //if no error show edit view
-        res.render('index', {title: 'Edit', page: 'edit',contact:contactItemToEdit})
-    })
+    Contact.findById(id, {}, {}, (err, contact))
 }

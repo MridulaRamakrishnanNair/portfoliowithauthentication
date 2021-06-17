@@ -30,6 +30,5 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
         }
         
         //if no error show edit view
-        res.render('index', {title: 'Edit', page: 'edit',contact:contactItemToEdit})
     })
 }

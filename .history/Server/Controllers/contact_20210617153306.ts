@@ -29,7 +29,6 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
             res.end(err);
         }
         
-        //if no error show edit view
-        res.render('index', {title: 'Edit', page: 'edit',contact:contactItemToEdit})
+        
     })
 }
