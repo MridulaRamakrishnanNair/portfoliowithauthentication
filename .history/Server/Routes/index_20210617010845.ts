@@ -14,6 +14,8 @@ router.get('/', DisplayHomePage);
 
 router.get('/home', DisplayHomePage);
 
+
+
 /* GET about page. */
 router.get('/about', DisplayAboutPage);
 
@@ -25,7 +27,7 @@ router.get('/projects', DisplayProjectsPage);
 router.get('/services', DisplayServicesPage);
 
 /* GET contact page. */
-router.get('/contact', DisplayContactPage);
+router.get('/contact', DisplayContactPage
 
 
 

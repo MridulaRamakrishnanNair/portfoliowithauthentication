@@ -4,7 +4,7 @@ export default router;
 
 //creating an index controller index
 
-import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage, } from '../Controllers/index';
+import {DisplayAboutPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage, } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);
@@ -13,6 +13,8 @@ router.get('/', DisplayHomePage);
 /* GET home page. */
 
 router.get('/home', DisplayHomePage);
+
+
 
 /* GET about page. */
 router.get('/about', DisplayAboutPage);
@@ -25,7 +27,10 @@ router.get('/projects', DisplayProjectsPage);
 router.get('/services', DisplayServicesPage);
 
 /* GET contact page. */
-router.get('/contact', DisplayContactPage);
+router.get('/contact', function (req, res, next)
+{
+  res.render('index', { title: 'Contact', page: 'contact' });
+});
 
 
 
