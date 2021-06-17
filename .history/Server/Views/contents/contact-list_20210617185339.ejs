@@ -1,0 +1,41 @@
+<h1>Contact List</h1>
+
+<div class="row">
+    <div class="col">
+     <!--table goes here-->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">LastName</th>
+                <th scope="col">Email</th>
+                <th scope="col">ContactNumber</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            <!--Repeatable Row Template-->
+
+            <% for (let count = 0;count < contact.length; count++) { %>
+
+           
+            <tr>
+                <th scope="row"><%= count + 1 %></th>
+                <td><%= contact[count].firstname %></td>
+                <td><%= contact[count].lastname %></td>
+                <td><%= contact[count].email %></td>
+                <td><%= contact[count].contactnumber %></td>
+                <td class="text-center"><a href="/clothing-list/edit/<%= clothing[count]._id %>" class="btn btn-primary btn-sm edit"><i class="fas fa-edit fa-sm"></i> Edit</a></td>
+                <td class="text-center"><a href="/clothing-list/delete/<%= clothing[count]._id %>" class="btn btn-danger btn-sm delete"><i class="fas fa-trash-alt fa-sm"></i> Delete</a></td>
+               
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+
+
+    </div>
+</div>
