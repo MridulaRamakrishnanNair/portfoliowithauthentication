@@ -3,9 +3,9 @@ import Contact from "../Models/contact";
 
 //import Util functions
 
-import { UserDisplayName} from '../Util';
+import { UserDisplayName, AuthGuard } from '../Util';
 
-//Display functions
+
 //(R)ead in CRUD
 export function DisplayContactListPage(req: Request, res: Response, next: NextFunction): void
 {

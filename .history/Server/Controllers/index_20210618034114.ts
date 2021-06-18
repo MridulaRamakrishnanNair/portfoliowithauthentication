@@ -29,14 +29,14 @@ res.render('index', { title: 'Services', page: 'services', displayName: UserDisp
 
 export function DisplayContactPage(req: Request, res: Response, next: NextFunction): void
 {
-res.render('index', { title: 'Contact', page: 'contact',displayName: UserDisplayName(req) });
+res.render('index', { title: 'Contact', page: 'contact' });
 }
 
 export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
 {
     if (!req.user)
     {
-        res.render('index', { title: 'Login', page: 'login',displayName: UserDisplayName(req) ,messages: req.flash('loginMessage') });
+        res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
     }
     return res.redirect("/contact-list");
 }
