@@ -59,10 +59,10 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
       // are there db errors?
       {
         if (err)
-            {
+        {
           console.error(err);
           return next(err);
-            }
+        }
 
         return res.redirect("/contact-list");
       }
@@ -71,9 +71,4 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
 }
 
     
-export function ProcessLogoutPage(req: Request, res: Response, next: NextFunction): void
-{
-  req.logout();
-
-  res.redirect("/login");
 }

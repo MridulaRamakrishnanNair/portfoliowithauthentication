@@ -41,28 +41,25 @@ export function DisplayLoginPage(req: Request, res: Response, next: NextFunction
 export function ProcessLoginPage(req: Request, res: Response, next: NextFunction): void
 {
     passport.authenticate("local", (err, user, info) => {
-    // to check if there are server errors?
-        if (err)
-        {
+    // to check if are there server errors?
+    if (err) {
       console.error(err);
       return next(err);
-        }
+    }
 
     // are there login errors?
-        if (!user)
-        {
+    if (!user) {
       req.flash("loginMessage", "Authentication Error");
       return res.redirect("/login");
-        }
+    }
 
     req.login(user, (err) =>
       // are there db errors?
       {
-        if (err)
-            {
+        if (err) {
           console.error(err);
           return next(err);
-            }
+        }
 
         return res.redirect("/contact-list");
       }
@@ -71,9 +68,4 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
 }
 
     
-export function ProcessLogoutPage(req: Request, res: Response, next: NextFunction): void
-{
-  req.logout();
-
-  res.redirect("/login");
 }

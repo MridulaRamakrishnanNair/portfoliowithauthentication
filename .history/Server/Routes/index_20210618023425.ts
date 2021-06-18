@@ -4,7 +4,7 @@ export default router;
 
 //creating an index controller index
 
-import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayServicesPage, ProcessLoginPage, ProcessLogoutPage, } from '../Controllers/index';
+import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage, } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);
@@ -29,12 +29,6 @@ router.get('/contact', DisplayContactPage);
 
 /* GET login page. */
 router.get('/login', DisplayLoginPage);
-
-/* POST - process Login page when user clicks Login button */
-router.post('/login', ProcessLoginPage);
-
-/* GET - process the Logout page - /logout */
-router.get('/logout', ProcessLogoutPage);
 
 
 

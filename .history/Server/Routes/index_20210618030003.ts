@@ -4,7 +4,7 @@ export default router;
 
 //creating an index controller index
 
-import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayServicesPage, ProcessLoginPage, ProcessLogoutPage, } from '../Controllers/index';
+import {DisplayAboutPage, DisplayContactPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayServicesPage, ProcessLoginPage, } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);

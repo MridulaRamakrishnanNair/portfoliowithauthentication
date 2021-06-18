@@ -28,8 +28,7 @@ export function DisplayContactPage(req: Request, res: Response, next: NextFuncti
 res.render('index', { title: 'Contact', page: 'contact' });
 }
 
-export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
-{
+export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void{
     if (!req.user)
     {
         res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
@@ -38,42 +37,4 @@ export function DisplayLoginPage(req: Request, res: Response, next: NextFunction
 }
 
 
-export function ProcessLoginPage(req: Request, res: Response, next: NextFunction): void
-{
-    passport.authenticate("local", (err, user, info) => {
-    // to check if there are server errors?
-        if (err)
-        {
-      console.error(err);
-      return next(err);
-        }
-
-    // are there login errors?
-        if (!user)
-        {
-      req.flash("loginMessage", "Authentication Error");
-      return res.redirect("/login");
-        }
-
-    req.login(user, (err) =>
-      // are there db errors?
-      {
-        if (err)
-            {
-          console.error(err);
-          return next(err);
-            }
-
-        return res.redirect("/contact-list");
-      }
-    );
-  })(req, res, next);
-}
-
-    
-export function ProcessLogoutPage(req: Request, res: Response, next: NextFunction): void
-{
-  req.logout();
-
-  res.redirect("/login");
-}
+export function ProcessLoginPage(req:Request, res: Res)

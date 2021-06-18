@@ -1,8 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
+exports.ProcessLogoutPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
+const passport_1 = __importDefault(require("passport"));
 function DisplayHomePage(req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
+    res.render('index', { title: 'Home', page: 'home', });
 }
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
@@ -21,4 +25,36 @@ function DisplayContactPage(req, res, next) {
     res.render('index', { title: 'Contact', page: 'contact' });
 }
 exports.DisplayContactPage = DisplayContactPage;
+function DisplayLoginPage(req, res, next) {
+    if (!req.user) {
+        res.render('index', { title: 'Login', page: 'login', messages: req.flash('loginMessage') });
+    }
+    return res.redirect("/contact-list");
+}
+exports.DisplayLoginPage = DisplayLoginPage;
+function ProcessLoginPage(req, res, next) {
+    passport_1.default.authenticate("local", (err, user, info) => {
+        if (err) {
+            console.error(err);
+            return next(err);
+        }
+        if (!user) {
+            req.flash("loginMessage", "Authentication Error");
+            return res.redirect("/login");
+        }
+        req.login(user, (err) => {
+            if (err) {
+                console.error(err);
+                return next(err);
+            }
+            return res.redirect("/contact-list");
+        });
+    })(req, res, next);
+}
+exports.ProcessLoginPage = ProcessLoginPage;
+function ProcessLogoutPage(req, res, next) {
+    req.logout();
+    res.redirect("/login");
+}
+exports.ProcessLogoutPage = ProcessLogoutPage;
 //# sourceMappingURL=index.js.map

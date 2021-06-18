@@ -71,8 +71,9 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
 }
 
     
-export function ProcessLogoutPage(req: Request, res: Response, next: NextFunction): void
-{
+export function ProcessLogoutPage(req: Request, res: Response,
+  next: NextFunction
+): void {
   req.logout();
 
   res.redirect("/login");
