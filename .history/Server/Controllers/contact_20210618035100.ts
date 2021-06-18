@@ -43,7 +43,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
 export function DisplayAddPage(req: Request, res: Response, next: NextFunction): void
 {
     // show the edit view
-    res.render('index', { title: 'Add', page: 'update', contact: "" ,displayName: UserDisplayName,});
+    res.render('index', { title: 'Add', page: 'update', contact: "" });
 }
 
 //Process Functions
