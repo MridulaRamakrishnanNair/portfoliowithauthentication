@@ -19,7 +19,7 @@ router.get('/', DisplayContactListPage);
 /* display edit/:id page with /contact-list/edit:id */
 router.get('/edit/:id', AuthGuard,DisplayEditPage);
 
-/* POST - process /clothing-list/add page */ 
+/* POST - process /clothing-list/add page */
 router.post('/add',AuthGuard, ProcessAddPage);
 
 /* POST - process /clothing-list/edit/:id page */
