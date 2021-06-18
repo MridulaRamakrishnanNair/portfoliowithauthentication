@@ -1,0 +1,42 @@
+<body style="background-color:#F9E79F">
+<div class="row justify-content-lg-center g-3">
+<h1>
+<%= title %>Contacts
+</h1>
+
+<form method = "POST" class="col-lg-6 col-md-10 col-sm-10">
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="firstname">FirstName</span>
+        <input id="firstname" type="text" class="form-control" placeholder="First Name" aria-label="FirstName"
+            aria-describedby="Contact FirstName" name ="firstname" value = "<%= contactitem.firstname %>" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="lastname">LastName</span>
+        <input id="lastname" type="text" class="form-control" placeholder="Last Name" aria-label="LastName"
+            aria-describedby="Contact LastName" name="lastname" value="<%= contactitem.lastname %>" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="email">Email</span>
+        <input id="email" type="text" class="form-control" placeholder="Email" aria-label="Email"
+            aria-describedby="Contact Email" name="email" value="<%= contactitem.email %>" required>
+    </div>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="name">ContactNumber</span>
+        <input id="contactnumber" type="text" class="form-control" placeholder="Contact Number" aria-label="FirstName"
+            aria-describedby="Contact ContactNumber" name="contactnumber" value="<%= contactitem.contactnumber %>" required>
+    </div>
+
+    <% if(title == "Edit") { %>
+                <button type="submit" id="editButton" class="btn btn-primary"><i class="fas fa-edit fa-lg"></i> Edit</button>
+            <% } else { %>
+                <button type="submit" id="addButton" class="btn btn-primary"><i class="fas fa-plus-circle fa-lg"></i> Add Contacts</button>
+            <% } %>
+            <a href="/contact-list" id="cancelButton" type="button" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</a>
+            </div>  
+
+</form>
+
+</div>

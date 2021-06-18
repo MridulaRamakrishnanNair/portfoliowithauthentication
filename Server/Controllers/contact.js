@@ -21,24 +21,24 @@ function DisplayEditPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Edit', page: 'update', contactitem: contactItemToEdit });
+        res.render('index', { title: 'Edit', page: 'update', item: contactItemToEdit });
     });
 }
 exports.DisplayEditPage = DisplayEditPage;
 function DisplayAddPage(req, res, next) {
-    res.render('index', { title: 'Add', page: 'update', contact: '' });
+    res.render('index', { title: 'Add', page: 'update', contact: "" });
 }
 exports.DisplayAddPage = DisplayAddPage;
 function ProcessEditPage(req, res, next) {
     let id = req.params.id;
-    let updatedClothingItem = new contact_1.default({
-        "_id": id,
-        "firstname": req.body.firstname,
-        "lastname": req.body.lastname,
-        "email": req.body.email,
-        "contactnumber": req.body.contactnumber
+    let updatedContactItem = new contact_1.default({
+        _id: id,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        contactnumber: req.body.contactnumber
     });
-    contact_1.default.updateOne({ _id: id }, updatedClothingItem, {}, (err) => {
+    contact_1.default.updateOne({ _id: id }, updatedContactItem, {}, (err) => {
         if (err) {
             console.error(err);
             res.end(err);
@@ -49,10 +49,10 @@ function ProcessEditPage(req, res, next) {
 exports.ProcessEditPage = ProcessEditPage;
 function ProcessAddPage(req, res, next) {
     let newContact = new contact_1.default({
-        "firstname": req.body.firstname,
-        "lastname": req.body.lastname,
-        "email": req.body.email,
-        "contactnumber": req.body.contactnumber
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        contactnumber: req.body.contactnumber
     });
     contact_1.default.create(newContact, (err) => {
         if (err) {
