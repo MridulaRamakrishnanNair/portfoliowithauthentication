@@ -120,7 +120,7 @@ export function ProcessRegisterPage(req: Request, res: Response, next: NextFunct
         // after successful registration - login the user
         return passport.authenticate('local')(req, res, () => 
         {
-            return res.redirect('/contact-list');
+            return res.redirect('/clothing-list');
         });
    });
 }

@@ -42,7 +42,7 @@ router.get('/logout', ProcessLogoutPage);
 //router.get('/register', DisplayRegisterPage);
 
 /* POST - process Register page when user presses Register button */
-//router.post('/register', ProcessRegisterPage);
+router.post('/register', ProcessRegisterPage);
 
 
 

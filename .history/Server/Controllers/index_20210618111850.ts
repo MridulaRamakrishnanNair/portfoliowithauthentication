@@ -99,7 +99,7 @@ export function ProcessRegisterPage(req: Request, res: Response, next: NextFunct
    let newUser = new User
    ({
         username: req.body.username,
-        emailAddress: req.body.emailAddress,
+        emailAddress: req.body.email,
         displayName: req.body.FirstName + " " + req.body.LastName
    });
 

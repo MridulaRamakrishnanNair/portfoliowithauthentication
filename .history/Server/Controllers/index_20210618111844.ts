@@ -98,7 +98,7 @@ export function ProcessRegisterPage(req: Request, res: Response, next: NextFunct
    // instantiate a new User Object
    let newUser = new User
    ({
-        username: req.body.username,
+        username: req.body.usernam,
         emailAddress: req.body.emailAddress,
         displayName: req.body.FirstName + " " + req.body.LastName
    });

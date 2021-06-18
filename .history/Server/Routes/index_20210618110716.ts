@@ -36,13 +36,11 @@ router.post('/login', ProcessLoginPage);
 /* GET - process the Logout page - /logout */
 router.get('/logout', ProcessLogoutPage);
 
-
-
 /* GET - display Register page - /register */
-//router.get('/register', DisplayRegisterPage);
+router.get('/register', DisplayRegisterPage);
 
 /* POST - process Register page when user presses Register button */
-//router.post('/register', ProcessRegisterPage);
+router.post('/register', ProcessRegisterPage);
 
 
 
