@@ -142,7 +142,7 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-15.12.2.tgz"
   integrity sha512-zjQ69G564OCIWIOHSXyQEEDpdpGl+G348RAKY0XXy9Z5kU9Vzv1GMNnkar/ZJ8dzXB3COzD9Mo9NtRZ4xfgUww==
 
-"@types/passport-local-mongoose@^4.0.14":
+"@types/passport-local-mongoose@^4.0.13":
   version "4.0.14"
   resolved "https://registry.yarnpkg.com/@types/passport-local-mongoose/-/passport-local-mongoose-4.0.14.tgz#11de85b01f6998e4ebc1bcc7500128f7e4d62a41"
   integrity sha512-EvaVpWw57tyOH3eJsZi+3YWv/8lMM79zd+3Wydak5BXBBoUSQTNvGQHt+P6vYR/k0z94TuezskhwelzO7no/AA==

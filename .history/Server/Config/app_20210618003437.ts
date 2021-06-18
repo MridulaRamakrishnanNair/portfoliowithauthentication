@@ -12,7 +12,7 @@ import passportLocal from 'passport-local';
 
 
 //authentication objects
-let localStrategy = passportLocal.Strategy; //alias
+let localStratergy = 
 
 
 

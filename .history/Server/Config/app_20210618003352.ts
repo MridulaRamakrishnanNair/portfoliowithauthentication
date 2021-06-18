@@ -11,10 +11,6 @@ import passport from 'passport';
 import passportLocal from 'passport-local';
 
 
-//authentication objects
-let localStrategy = passportLocal.Strategy; //alias
-
-
 
 
 //attach router files
