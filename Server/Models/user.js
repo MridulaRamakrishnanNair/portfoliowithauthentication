@@ -17,11 +17,11 @@ const UserSchema = new Schema({
     updated: {
         type: Date,
         default: Date.now()
-    },
+    }
 }, {
     collection: "users"
 });
 UserSchema.plugin(passport_local_mongoose_1.default);
-const Model = mongoose_1.default.model("Contact", UserSchema);
+const Model = mongoose_1.default.model("User", UserSchema);
 exports.default = Model;
 //# sourceMappingURL=user.js.map
