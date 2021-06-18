@@ -30,7 +30,7 @@ export function DisplayEditPage(req: Request, res: Response, next: NextFunction)
         }
         
         //if no error show edit view
-        res.render('index', { title: 'Edit', page: 'update', contact: contactItemToEdit});
+        res.render('index', { title: 'Edit', page: 'update', item: contactItemToEdit});
     });
 }
 
@@ -64,10 +64,8 @@ export function ProcessEditPage(req: Request, res: Response, next: NextFunction)
         console.error(err);
         res.end(err);
       }
-
-     
   
-       res.redirect('/contact-list');
+      // res.render('/contact-list');
     });      
 }
 
